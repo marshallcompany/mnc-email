@@ -1,24 +1,470 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Vitalii Stepanenko</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="description" content="Vitalii Stepanenko">
-		<link rel="shortcut icon" type="image/x-icon" href="img/fav.ico">
-		<!--css-->
-		<link rel="stylesheet" href="libs/slick/slick.css">
-		<link rel="stylesheet" href="css/main.css">
-	</head>
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>M&C</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet" />
+	<style>
+		body {
+			width: 100% !important;
+			-webkit-text-size-adjust: 100%;
+			-ms-text-size-adjust: 100%;
+			margin: 0;
+			padding: 0;
+			line-height: 100%;
+			background-color: #f9f9f9;
+			line-height: 1.25;
+		}
 
-	<body>
-		
-		<!--script-->
-		<script src="libs/jquery-3.3.1.min.js"></script>
-		<script src="libs/jquery.maskedinput.js"></script>
-		<script src="libs/slick/slick.min.js"></script>
-		<script src="js/common.js"></script>
-	</body>
+		[style*="Poppins"] {font-family: 'Poppins', arial, sans-serif !important;}
+
+		img {
+			outline: none;
+			text-decoration: none;
+			border:none;
+			-ms-interpolation-mode: bicubic;
+			max-width: 100%!important;
+			margin: 0;
+			padding: 0;
+			display: block;
+		}
+    
+		table td {
+			border-collapse: collapse;
+		}
+    
+		table {
+			border-collapse: collapse;
+			mso-table-lspace: 0pt;
+			mso-table-rspace: 0pt;
+		}
+		.header-td{
+			padding-top: 45px;
+			padding-bottom: 55px;
+		}
+		.information-td{
+			padding-top: 40px;
+			padding-bottom: 50px;
+		}
+		.information-icon-td{
+			padding-bottom: 25px;
+		}
+		.information-title-td h2 {
+			text-align: center;
+			font-size: 28px;
+		}
+		.information-description-td p {
+			text-align: center;
+			font-size: 15px;
+			line-height: 24px;
+			margin: 0;
+		}
+		.data-td{
+			padding-top: 30px;
+			padding-right: 30px;
+			padding-left: 30px;
+		}
+		.data-item-td {
+			padding: 0;
+			padding-bottom: 30px;
+		}
+		.data-item-td h3 {
+			margin: 0;
+			font-size: 15px;
+			padding-bottom: 10px;
+			border-bottom: 1px solid #E9E9E9;
+		}
+		.data-item-td p {
+			margin: 0;
+			font-size: 15px;
+			line-height: 24px;
+		}
+		.line-td{
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+		.line-td p {
+			margin: 0;
+			height: 1px;
+		}
+		.order-primary-title-td h3 {
+			margin: 0;
+			margin-bottom: 25px;
+			font-size: 28px;
+		}
+		.order-wrapper-td {
+			padding-top: 24px;
+			padding-right: 23px;
+			padding-bottom: 24px;
+			padding-left: 25px; 
+		}
+		.order-photo-td {
+			width:100px;
+			height: 107px;
+			padding-right: 15px;
+		}
+		.order-photo-td img {
+			width: 100%;
+			height: 100%;
+			border-radius: 6px;
+		}
+		.order-title-td h3 {
+			margin: 0;
+			font-size: 18px;
+			padding-bottom: 8px;
+		}
+		.order-description-td p {
+			font-size: 14px;
+			color: #9C9C9C;
+			margin: 0;
+			padding-bottom: 20px;
+		}
+		.order-quantity-td p {
+			margin: 0;
+			font-size: 16px;
+		}
+		.order-quantity-td p span{
+			font-size: 18px;
+		}
+		.order-price-td p {
+			margin: 0;
+			font-size: 18px;
+		}
+		.view-order-td {
+			padding-top: 30px;
+		}
+		.view-order-td a {
+			display: block;
+			background-color: #44AF83;
+			text-align: center;
+			font-size: 14px;
+			line-height: 42px;
+			text-transform: uppercase;
+			text-decoration: none;
+			color: #ffffff;
+			border-radius: 100px;
+		}
+		.footer-td{
+			padding-top: 40px;
+			padding-bottom: 30px; 
+		}
+		.footer-item-td a {
+			text-transform: uppercase;
+			text-decoration: none;
+			font-size: 11px;
+			margin: 0;
+		}
+		.footer-item-td a span {
+			padding-left: 20px;
+		}
+		.copyright-td p {
+			margin: 0;
+			color: #767676;
+			font-size: 12px;
+		}
+		@media (min-width: 320px) and (max-width: 601px) {
+			.table-600{
+				width: 375px!important;
+			}
+			.information-td {
+				padding-top: 20px!important;
+				padding-bottom: 30px!important;
+			}
+			.information-padding-td {
+				padding-top: 0px!important;
+			}
+			.information-title-td h2 {
+				font-size: 18px!important;
+			}
+			.information-description-td p {
+				font-size: 14px!important;
+			}
+			.information-description-td p br {
+				display: none!important;
+			}
+			.data-td {
+				padding-left: 15px!important;
+				padding-right: 15px!important;
+			}
+			.data-item-td{
+				display: block!important;
+				width: 100%!important;
+			}
+			.line-td{
+				padding-top: 30px;
+				padding-bottom: 30px;
+			}
+			.order-wrapper-td {
+				padding-left: 15px!important;
+				padding-right: 15px!important;
+			}
+			.order-primary-title-td h3 {
+				font-size: 20px!important;
+			}
+			.order-photo-td {
+				display: block!important;
+				padding-right: 0px!important;
+				padding-bottom: 10px!important;
+				width: 150px!important;
+				height: 150px!important;
+			}
+			.order-data-td{
+				display: block!important;
+			}
+		}
+		@media (min-width: 320px) and (max-width: 376px) {
+			.table-600{
+				width: 300px!important;
+			}
+			.table-330 {
+				width: 300px!important;
+			}
+			.information-icon-td img {
+				height: 56px!important;
+			}
+			.order-photo-td {
+				width: 120px!important; 
+				height: 120px!important; 
+			}
+			.order-title-td h3 {
+				font-size: 16px!important;
+			}
+			.order-description-td p {
+				font-size: 12px!important;
+			}
+			.order-quantity-td p {
+				font-size: 14px!important;
+			}
+			.order-quantity-td p span {
+				font-size: 16px!important;
+			}
+		}
+	</style>
+</head>
+<body style="margin: 0; padding: 0;">
+	<table cellpadding="0" cellspacing="0" width="100%" bgcolor="#f9f9f9">
+			<tr>
+				<td class="header-td" bgcolor="#1A1A1A" align="center">
+						<table class="table-600" cellpadding="0" cellspacing="0" width="600">
+							<tr>
+								<td class="logo-td" align="center">
+									<a href="#">
+										<img src="img/logo.png" alt="M&C">
+									</a>
+								</td>
+							</tr>
+						</table>
+				</td>
+			</tr>
+			<tr>
+				<td class="information-td" align="center">
+					<table class="table-600" cellpadding="0" cellspacing="0" width="600">
+						<tr>
+							<td class="information-icon-td" align="center">
+								<img src="img/heart.png" alt="heart">
+							</td>
+						</tr>
+						<tr>
+							<td class="information-title-td">
+								<h2 style="font-family: Arial, Helvetica, sans-serif, 'Poppins'; font-weight: 600; margin: 0; margin-bottom: 20px;">Thank you for your order!</h2>
+							</td>
+						</tr>
+						<tr>
+							<td class="information-description-td">
+								<p style="font-family: Arial, Helvetica, sans-serif, 'Poppins'; font-weight: normal;">
+									Hi Pete! Your order <span style="color:#44AF83;">YXZ45611</span> has successfully been placed. You will <br>
+									find all the details about your order below. If you have any <br>
+									questions you can contact with our <span style="color:#44AF83;">client support</span>.
+								</p>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td align="center" >
+					<table class="table-600" cellpadding="0" cellspacing="0" width="600px" bgcolor="#ffffff" 
+									style="border-radius: 6px; box-shadow: 0 0 0 1px #E2E2E2; border-style: hidden">
+						<tr>
+							<td class="data-td">
+								<table cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff" >
+									<tr valign="top">
+										<td class="data-item-td" style="width: 270px;">
+											<h3 style="font-family: Arial, Helvetica, sans-serif, 'Poppins'; font-weight: 600;">Workplace Name</h3>
+											<p  style="font-family: Arial, Helvetica, sans-serif, 'Poppins';">WoodWorkStore</p>
+										</td>
+										<td class="data-item-td" style="width: 270px;">
+											<h3 style="font-family: Arial, Helvetica, sans-serif, 'Poppins'; font-weight: 600;">Estimated delivery date</h3>
+											<p  style="font-family: Arial, Helvetica, sans-serif, 'Poppins';">15 June 2019</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td class="data-item-td" style="width: 270px;">
+											<h3 style="font-family: Arial, Helvetica, sans-serif, 'Poppins'; font-weight: 600;">Order Number</h3>
+											<p  style="font-family: Arial, Helvetica, sans-serif, 'Poppins';">YXZ45611</p>
+										</td>
+										<td class="data-item-td" style="width: 270px;">
+											<h3 style="font-family: Arial, Helvetica, sans-serif, 'Poppins'; font-weight: 600;">Order Date</h3>
+											<p  style="font-family: Arial, Helvetica, sans-serif, 'Poppins';">22 May 2019</p>
+										</td>
+									</tr>
+									<tr valign="top">
+										<td class="data-item-td" style="width: 270px;">
+											<h3 style="font-family: Arial, Helvetica, sans-serif, 'Poppins'; font-weight: 600;">Shipping Address</h3>
+											<p  style="font-family: Arial, Helvetica, sans-serif, 'Poppins';">
+												Ryan Stewart
+												Briedelaan 21, 3951BB MAARN
+												Netherlands
+											</p>
+										</td>
+										<td class="data-item-td" style="width: 270px;">
+											<h3 style="font-family: Arial, Helvetica, sans-serif, 'Poppins'; font-weight: 600;">Paynet method</h3>
+											<p  style="font-family: Arial, Helvetica, sans-serif, 'Poppins';">Visa 5768 **** **** ***5</p>
+											<p style="font-family: Arial, Helvetica, sans-serif, 'Poppins'; color:#44AF83;" >payment successful</p>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td  class="line-td">
+						<p style="background-color: #E9E9E9;"></p>
+				</td>
+			</tr>
+			<tr>
+				<td align="center" class="order-primary-title-td">
+					<h3 style="font-family: Arial, Helvetica, sans-serif, 'Poppins'; font-weight: 600;">Order Summary</h3>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					<table class="table-600" cellpadding="0" cellspacing="0" width="600px" bgcolor="#ffffff"
+					style="border-radius: 6px; box-shadow: 0 0 0 1px #E2E2E2; border-style: hidden;">
+						<tr>
+							<td class="order-wrapper-td">
+								<table class="table-order" cellpadding="0" cellspacing="0" width="100%">
+									<tr>
+										<td  class="order-photo-td">
+											<img src="img/order.png" alt="Order Photo">
+										</td>
+										<td class="order-data-td">
+											<table cellpadding="0" cellspacing="0" width="100%">
+												<tr>
+													<td class="order-title-td">
+														<h3 style="font-family: Arial, Helvetica, sans-serif, 'Poppins'; font-weight: 300;">Little wooden table</h3>
+													</td>
+												</tr>
+												<tr>
+													<td class="order-description-td">
+														<p style="font-family: Arial, Helvetica, sans-serif, 'Poppins';">black, wooden, 50x170x190</p>
+													</td>
+												</tr>
+												<tr>
+													<td class="order-quantity-td">
+														<p style="font-family: Arial, Helvetica, sans-serif, 'Poppins'; font-weight: 300;">
+															Quantity
+															<span style="font-family: Arial, Helvetica, sans-serif, 'Poppins'; font-weight: 600;">1</span>
+														</p>
+													</td>
+													<td align="right" class="order-price-td">
+														<p style="font-family: Arial, Helvetica, sans-serif, 'Poppins'; font-weight: 600;">€349,99</p>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td align="center" class="view-order-td">
+					<a href="#" 
+						style="font-family: Arial, Helvetica, sans-serif, 'Poppins'; width: 177px; height: 42px; font-weight: 600;">
+						View order
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td  class="line-td">
+						<p style="background-color: #E9E9E9;"></p>
+				</td>
+			</tr>
+			<tr>
+				<td class="information-td information-padding-td" align="center" style="padding-top: 0px; padding-bottom: 90px;">
+					<table class="table-600" cellpadding="0" cellspacing="0" width="600">
+						<tr>
+							<td class="information-icon-td" align="center">
+								<img src="img/quotes.png" alt="quotes">
+							</td>
+						</tr>
+						<tr>
+							<td class="information-title-td">
+								<h2 style="font-family: Arial, Helvetica, sans-serif, 'Poppins'; font-weight: 600; margin: 0; margin-bottom: 20px;">
+									Personal note <br>
+									by Pete Greyhouse
+								</h2>
+							</td>
+						</tr>
+						<tr>
+							<td class="information-description-td">
+								<p style="font-family: Arial, Helvetica, sans-serif, 'Poppins'; font-weight: normal;">
+									Thanks for your order! We are now busy to find the best wood to <br>
+									make your unique piece. We will take love and care to make your <br>
+									product the best we can. Please feel free to ask us anything by <br> 
+									using a “Contact master” button on our online workplace. Kind <br>
+									regards, Pete Greyhouse from Woodworkshop
+								</p>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td align="center" bgcolor="#1A1A1A"	class="footer-td">
+					<table class="table-330" cellpadding="0" cellspacing="0" width="330px">
+						<tr>
+							<td class="footer-item-td">
+								<a  href="#" style="font-family: Arial, Helvetica, sans-serif, 'Poppins'; font-weight: 600; color: #ffffff;">
+									Help Center
+									<span>|</span>
+								</a>
+							</td>
+							<td class="footer-item-td">
+								<a href="#" style="font-family: Arial, Helvetica, sans-serif, 'Poppins'; font-weight: 600; color: #ffffff;">
+									Client support
+									<span>|</span>
+								</a>
+							</td>
+							<td class="footer-item-td">
+								<a  href="#" style="font-family: Arial, Helvetica, sans-serif, 'Poppins'; font-weight: 600; color: #ffffff;">ACCOUNT</a>
+							</td>
+						</tr>
+					</table>
+					<table cellpadding="0" cellspacing="0" width="100%">
+						<tr>
+							<td class="line-td">
+								<p style="background-color:#2e2e2e;"></p>
+							</td>
+						</tr>
+					</table>
+					<table class="table-330" cellpadding="0" cellspacing="0" width="330px">
+						<tr>
+							<td align="center" class="copyright-td">
+								<p style="font-family: Arial, Helvetica, sans-serif, 'Poppins';">Copyright © 2019 Masters&Crafters. All Rights Reserved.</p>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+	</table>
+</body>
 
 </html>
